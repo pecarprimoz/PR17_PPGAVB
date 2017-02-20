@@ -1,8 +1,10 @@
 ### PR SEMINARKSA
 Sprotno delo predmeta Podatkovno Rudarjenje
 
-Ekipa: Primož Pečar
+Ekipa:
 
-Vid Babič
+* Primož Pečar
 
-Gregor Ažbe
+* Vid Babič
+
+* Gregor Ažbe
