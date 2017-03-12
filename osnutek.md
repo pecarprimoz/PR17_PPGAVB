@@ -15,5 +15,5 @@ Specifični problemi so (naprimer) sledeči:
  * Izbira neobveznih izbirnih predmetov
  * Kateri tuji jeziki prevladujejo, koliko otrok hodi v glasbene šole...
 
-Na voljo imamo tudi podatke za 10 let nazaj, zato bo na splošno cilj ugotoviti kako je bilo npr. 10 let nazaj v osnovnih šolah, ter kako je sedaj.
+Na voljo imamo tudi podatke za 10 let nazaj, zato bo cilj ugotoviti kako je bilo npr. 10 let nazaj, ter kako je sedaj.
 Na koncu bi lahko imeli aplikacijo, ki bi prikazovala trende za specifične regije po Sloveniji in tudi možnost za vpogled za nazaj.
