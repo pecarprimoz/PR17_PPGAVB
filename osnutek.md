@@ -5,7 +5,7 @@ S skupino bomo delali na podatkovni množici Ministerstva za izobraževanje, zna
 Poskušali bomo ugotoviti kakšni so trenutni trendi v osnovnih šolah, bolj specifično kako je bilo včasih, v nasprotju kako je danes. Povdarek bo na specifičnih regijah in dejavnostih osnovnošolcev. 
 
 # Vprašanja, cilji, opis problema
-Ker imamo veliko različnih podatkov in tudi vpogled v zgodovino, se bomo bolj splošno usmerili v to nalogo. 
+Ker imamo veliko različnih podatkov in tudi vpogled v zgodovino, se bomo v to nalogo usmerili bolj splošno. 
 Specifični problemi so (naprimer) sledeči:
  * Koliko otrok obiskuje podalšano bivanje po specifičnih regijah, kako je bilo včasih
  * Kateri izbirni predmeti so na splošno bolj popularni in kateri manj
