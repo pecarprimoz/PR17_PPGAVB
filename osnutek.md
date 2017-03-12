@@ -3,6 +3,7 @@ S skupino bomo delali na podatkovni množici Ministerstva za izobraževanje, zna
 
 # Problem
 Poskušali bomo ugotoviti kakšni so trenutni trendi v osnovnih šolah, bolj specifično kako je bilo včasih, v nasprotju kako je danes. 
+
 Povdarek bo na specifičnih regijah in dejavnostih osnovnošolcev. 
 
 # Vprašanja, cilji, opis problema
