@@ -8,3 +8,5 @@ Ekipa:
 * Vid Babič
 
 * Gregor Ažbe
+
+Za več informacij beri osnutek.md
