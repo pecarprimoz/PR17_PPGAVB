@@ -5,8 +5,8 @@
     x9e, x9a -> ž, š
     x8e, x8a -> Ž, Š
 '''
-txtPathFile="../podatki/Osnovne_sole_brez_enot_OSPP.txt"
-txtPathWrite="../customdata/osnovne_sole_brez_enot_proper_pp.txt"
+txtPathFile="../podatki/Sifrant_txt.txt"
+txtPathWrite="../customdata/Sifrant_txt_pravilno.txt"
 f=open(txtPathFile, 'r', encoding = "ISO-8859-1")
 w=open(txtPathWrite, 'w')
 for vrstica in f:
