@@ -4,8 +4,8 @@ strn = "765,'Osnovna šola Cirkulane - Zavrč, Podružnica Zavrč','Srečanja s 
 
 p = re.compile(r'(?<=[a-zA-Z]),(?=[a-zA-Z\s])')
 result = p.sub("", strn)
-nf= open("../podatki/correcttxt_new.txt",'w')
-with open("../podatki/izb_txt.txt", encoding="utf-8") as file:
+nf= open("../txts/sifrat_txt_new.txt",'w')
+with open("../txts/Sifrant_txt.txt", encoding="utf-8") as file:
     for i in file:
         if "Zavrč," in i:
             i=i.replace('Osnovna šola Cirkulane - Zavrč, Podružnica Zavrč','Osnovna šola Cirkulane - Zavrč Podružnica Zavrč')
