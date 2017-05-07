@@ -41,6 +41,14 @@ Izdelal sem še dva scatter plotta, kako so učenci in učenke zastopani glede n
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/scatter_ucenciXromi_po_razredih.png?raw=true "Scatter plot, učenci in romi")
 
+#### Napoved razreda glede na oddelek, št. učencov, učenk in romov
+Za konec pa sem poskušal napovedati, v kateri razred bi spadala določena skupina otrok v nekem oddelku. Še preden sem začel, nisem pričakoval dobrih rezultatov, saj poskušam napovedati leto iz števila otrok in črke oddelka. Poskušal sem nekaj modelov, vendar so bili rezultati sledeči.
+
+| Method                    | AUC    | CA     |  F1     | Precision  | Recall |
+| Logistic Regression       | 0.532  | 0.127  |  0.104  | 0.128      | 0.127  |
+
+Kot pričakovano, model je neuporaben, ker nimamo zadosti dobre podatke.
+
 #### Analiza OŠ
 Analiziral sem datoteko OŠ.xslx, ki vsebuje osnovne podatke o slovenskih osnovnih šolah (Šifra, Občina, Naslov, Naziv...).
 Za boljši občutek o lokacijah šol sem naredil zemljevid vseh šol s pomočjo geolokacije.
