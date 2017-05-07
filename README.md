@@ -43,3 +43,10 @@ Izdelal sem še dva scatter plotta, kako so učenci in učenke zastopani glede n
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/scatter_ucenkeXucenci_po_razredih.png?raw=true "Scatter plot, učenci in učenke")
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/scatter_ucenciXromi_po_razredih.png?raw=true "Scatter plot, učenci in romi")
+
+#### Analiza OŠ
+Analiziral sem datoteko OŠ.xslx, ki vsebuje osnovne podatke o slovenskih osnovnih šolah (Šifra, Občina, Naslov, Naziv...).
+Za boljši občutek o lokacijah šol sem naredil zemljevid vseh šol s pomočjo geolokacije.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/sole_slo.png?raw=true "Lokacije vseh šol")
+
