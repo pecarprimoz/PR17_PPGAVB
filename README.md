@@ -1,5 +1,3 @@
-# Primož
-Vprašanja, ki smo si jih zastavili so bila preveč optimistična.
 
 #### Popravil podatke
 S podatki, ki smo jih dobili v originalnem stanju, smo imeli težave s šumniki (kodirano v windows-1250 namesto v utf-8) tako, da sem napisal parser za to. Kasneje smo ugotovili, da je potrebno v Excelu shraniti v pravilnem kodiranju.
