@@ -69,7 +69,7 @@ Pregledam sem tudi zgodovino, kako se število otrok razporedi po razredih in do
 
 Rezultati so nekako smiselni, saj si lahko predstavljam, da se največ staršev odloči za to potezo na začetku otrokovega šolanja.
 
-Ko pogledamo številke po šolah, dobimo sledečih 5 šol z največnim številom:
+Ko pogledamo številke po šolah, dobimo sledečih 5 šol z največjim številom:
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_otrok_izob_top5.png?raw=true "Število otrok po šolah")
 
