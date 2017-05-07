@@ -1,7 +1,4 @@
 
-# Primož
-Vprašanja, ki smo si jih zastavili so bila preveč optimistična.
-
 #### Popravil podatke
 Podatke, ki smo dobili v originalnem stanju, so imele težave s šumniki (encodano v windows-1250, namest utf-8), tako da sem napisal parser za to, kasneje smo ugotovili, da je potrebno v excelu shraniti v pravilnem encodingu.
 
