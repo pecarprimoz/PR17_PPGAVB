@@ -48,5 +48,5 @@ Izdelal sem še dva scatter plotta, kako so učenci in učenke zastopani glede n
 Analiziral sem datoteko OŠ.xslx, ki vsebuje osnovne podatke o slovenskih osnovnih šolah (Šifra, Občina, Naslov, Naziv...).
 Za boljši občutek o lokacijah šol sem naredil zemljevid vseh šol s pomočjo geolokacije.
 
-![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/sole_slo.png?raw=true "Lokacije vseh šol")
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/sole_slo.PNG?raw=true "Lokacije vseh šol")
 
