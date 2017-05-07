@@ -16,7 +16,7 @@ In še zadnja stvar, podatki niso popolni, nekaj jih je izpolnjenih čisto nesmi
 #### Izdelal skripte za analzio
 Naredil sem nekaj preprostih skrip za samo parsanje datotek, npr. za oddelke pobere le vrednosti o letu, oddelku, učencih, učenkah in romih, tako sem zbil iz 2.852.050 na 428.820 celic, posledično hitrejše izvajanje skript in nasploh delovanje v Orange3. Izdelal skripte, za izdelavo novih excel datotek z podatki, ki so me zanimali.
 
-##### Porazdelitev otrok glede na šolo
+##### Število otrok na šolo za 10 let
 Pobral vse možne šole in seštel koliko otrok hodi na določeno šolo. Tako sem dobil porazdelitev za število otrok vseh slovenskih šol. V primeru, da ne uporabimo histograma, dobimo normalno porazdelitev.
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/hist_otroci.png?raw=true "Porazdelitev otrok v histogramu.")
 
