@@ -45,6 +45,7 @@ Izdelal sem še dva scatter plotta, kako so učenci in učenke zastopani glede n
 Za konec pa sem poskušal napovedati, v kateri razred bi spadala določena skupina otrok v nekem oddelku. Še preden sem začel, nisem pričakoval dobrih rezultatov, saj poskušam napovedati leto iz števila otrok in črke oddelka. Poskušal sem nekaj modelov, vendar so bili rezultati sledeči.
 
 | Method                    | AUC    | CA     |  F1     | Precision  | Recall |
+| ------------------------- |--------|--------|---------|------------|--------|
 | Logistic Regression       | 0.532  | 0.127  |  0.104  | 0.128      | 0.127  |
 
 Kot pričakovano, model je neuporaben, ker nimamo zadosti dobre podatke.
