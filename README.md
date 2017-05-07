@@ -50,3 +50,31 @@ Za boljši občutek o lokacijah šol sem naredil zemljevid vseh šol s pomočjo 
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/sole_slo.PNG?raw=true "Lokacije vseh šol")
 
+Naredil sem tudi analizo šol glede na regijo in kasneje tudi glede na območno enoto.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_sol_po_regijah.png?raw=true "Število šol na regijo")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_sol_oe.png?raw=true "Število šol na območno enoto")
+
+Največ šol je pričakovano v osrednjeslovenski regiji zaradi največjega števila ljudi. Najmanj šol je v zasavski regiji oziroma v območni enoti Slovenj Gradec, če gledamo območne enote namesto regij.
+
+#### Analiza Izobraževanja da domu
+Analiziral sem tudi podatke o izobraževanju na domu. 
+Ob analizi podatkov po letih sem ugotovil, da se trend izobraževanja na domu povečuje zadnja leta.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_otrok_izob_hist.png?raw=true "Število otrok, ki se izobražujejo doma (histogram)")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_otrok_izob_line.png?raw=true "Število otrok, ki se izobražujejo doma")
+
+Pregledam sem tudi zgodovino, kako se število otrok razporedi po razredih in dobil sledeč histogram.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_otrok_izob_po_razredih.png?raw=true "Število otrok po razredih")
+
+Rezultati so nekako smiselni, saj si lahko predstavljam, da se največ staršev odloči za to potezo na začetku otrokovega šolanja.
+
+Ko pogledamo številke po šolah, dobimo sledečih 5 šol z največnim številom:
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_otrok_izob_top5.png?raw=true "Število otrok po šolah")
+
+Na vrhu je prepričljivo osnovna šola Livada v kateri je vpisanih približno 90% otrok, ki niso iz slovenskih družin. Tako je nekako pričakovano, da se veliko takih družin odloči za šolanje doma. Velik vpliv ima seveda tudi to, da je to najbližja šola azilnemu domu na Viču.
+Predpostavljam, da je podobno z OŠ Trnovo saj je precej blizu OŠ Livada.
