@@ -1,3 +1,6 @@
+#### Opis podatkov
+
+Pri izdelavi seminarske naloge uporabljamo podatke o osnovnih šolah. Podatke smo dobili na Ministerstvu za izobraževanje, znanost in šport. Imamo štiri pomembnejše tabele in sicer tabele z podatki o šolah, oddelkih, izbirnih predmetih in izobraževanju na domu.
 
 #### Popravil podatke
 S podatki, ki smo jih dobili v originalnem stanju, smo imeli težave s šumniki (kodirano v windows-1250 namesto v utf-8) tako, da sem napisal parser za to. Kasneje smo ugotovili, da je potrebno v Excelu shraniti v pravilnem kodiranju.
@@ -84,3 +87,27 @@ Ko pogledamo številke po šolah, dobimo sledečih 5 šol z največjim številom
 
 Na vrhu je prepričljivo osnovna šola Livada v kateri je vpisanih približno 90% otrok, ki niso iz slovenskih družin. Tako je nekako pričakovano, da se veliko takih družin odloči za šolanje doma. Velik vpliv ima seveda tudi to, da je to najbližja šola azilnemu domu na Viču.
 Predpostavljam, da je podobno z OŠ Trnovo saj je precej blizu OŠ Livada.
+
+#### Podrobnejša analiza po regijah
+
+Naredil sem analizo po regijah. Opazoval sem število učencev, romov, učencev, ki obiskujejo podaljšano bivanje, učencev z odločbo o usmerjanju. Naračunal sem povprečne vrednosti na oddelek. Prišel sem do zanimive ugotovite, da pomurska regija v veliko primerih odstopa od ostalih regij.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regije/st_oddelkov.jpg?raw=true "Število oddelkov po regijah")
+
+Najprej sem izdelal graf, ki prikazuje število oddelkov. Zelo izstopa osrednjeslovenska regija, kar je pričakovano, saj ima glede na zgornje rezultate največ šol in učencev.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regije/avg_st_ucencev.jpg?raw=true "Povprečno število učencev v oddelku po regijah")
+
+Pri pregledu povprečnih velikosti oddelkov sem ugotovil, da so vrednosti med 7 in 17, kar je neobičajno za normalen oddlek. Sklepam, da je to zaradi velikega števila podružnic, ki imajo majhne oddelke in tako znižujejo povprečje. Precej izstopa pomurska regija z zelo nizkim povprečjem. Sklepam, da je na tem območju veliko podružnic. Resničnost te hipoteze bomo raziskovali v nadaljevanju.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regije/avg_st_romov.jpg?raw=true "Povprečno število romskih otrok v oddelku po regijah")
+
+Naslednja stvar, ki sem jo preučevanjem števila romskih učencev. Povprečno število romov v oddelku se zelo razlikuje med regijami. Najbolj izstopata pomurska in JV Slovenija, kjer so na oddelek povprečno od 3 do 4 romi. Najmanj romskih otrok pa je v gorenjski, goriški, obalno-kraški in notranjsko-kraški regiji, torej v vzhodni Sloveniji, in pa v koroški ter savinjski regiji.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regije/avg_st_OPB.jpg?raw=true "Povprečno število otrok v oddelku, ki obiskujejo podaljšano bivanje, po regijah")
+
+Iz podatkov je razvidno, da je več otrok v podaljšanem bivanju iz zahodne slovenije (Gorenjska, Goriška, Osrednjeslovenska in Obalno-Kraška). Obratno pa je na zahodu in jugu slovenije, kjer je manj otrok v podaljšanem bivanju. Spet posebaj izstopa pomurska regija.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regije/avg_st_odlocba.jpg?raw=true "Povprečno število otrok z odločbo o usmerjanju po regijah")
+
+Prišel sem do zanimive ugotovitve, da zasavska regija nenavadno odstopa od ostalih regij. Vse ostanle imajo povprečno manj kot enega učeca na oddelek. Zasavska pa kar 1,6.
