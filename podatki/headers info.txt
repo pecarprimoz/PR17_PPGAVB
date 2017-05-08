@@ -4,48 +4,48 @@ zavnaz		naziv zavoda
 prtnaz		naziv predmeta
 predmet_id	id predmeta
 program_id	id programa
-st_dur		število ur??
-delitev		število delitev??
+st_dur		število ur predmeta / teden
+delitev		delitev DA/NE
 st_uc		število uèencev
-st_odd		število oddelkov
-st_pu		število??
+st_odd		število oddelkov / fiktivnih (nepomembno)
+st_pu		število pedagoških ur / teden
 
 IZOBE_NA_DOMU	izobraževanje na domu
 zavsif		id zavoda
-sl_id		id oddelka??
-obr_id		id
+sl_id		id šolskega leta
+obr_id		id obrazca v aplikaciji - nepomembno
 st_uc		število uèencev
-naziv		naziv razreda??
-naziv povezave	??
+naziv		razred
+naziv povezave	nepomembno
 
 POD_ODD_1	podatki o oddelku
-sl_id		id??
+sl_id		id šolskega leta
 zavsif		id zavoda
-oezrrs		id obèine??
+oezrrs		id org. enote Zavoda za šolstvo - nepomembno
 komentar	komentar
-zavkategnac	kategorija zavoda?? [OŠ, OŠPP]??
-predmetnik	predmetnik [A-??] ??
-zavsifmat	id matiènega zavoda??
-sist_spec_kod	??
-sist_spec_rom	romi??
-id		id oddelka??
-mat id		id matiènega oddelka??
-program_id	id programa??
-razred		razred??
-razred_oznaka	oznaka razreda [A-]
-tip		tip??
-delež		delež??
+zavkategnac	kategorija zavoda [OŠ, OŠPP]
+predmetnik	predmetnik (slovenski, italijanski, madžrski, prilagojen ...)
+zavsifmat	id matiènega zavoda
+sist_spec_kod	nepomembno
+sist_spec_rom	nepomembno
+id		id zapisa
+mat id		id matiènega oddelka - enak ID pomeni isti oddelek ki je v kombinaciji
+program_id	id programa
+razred		sifra razred
+razred_oznaka	oznaka ali opis razreda [A-]
+tip		èisti ali kombiniran oddelek
+delež		delež oddelka
 st_uc		število uèencev
 st_dek		število deklet
-st_rom		število romov
-st_odl_usm	število uèencev z odloèbo o usmerjanju??
-niz_nor		??
+st_rom		število romov - podatek se lahko uporabi samo na nivoju regije ali države
+st_odl_usm	število uèencev z odloèbo o usmerjanju - podatek se lahko uporabi samo na nivoju regije ali države
+niz_nor		nepomembno
 st_opb		število uèencev v podaljšanem bivanju [#, null??]
-jezik_1		1. tuji?? jezik
-jezik_2		2. tuji?? jezik
-komb		kombiniran oddelek??
-komb_su		število uèencev v kombiniranem oddelku??
-komb_sd		število deklic v kombiniranem oddelku??
+jezik_1		1. tuji jezik
+jezik_2		2. tuji jezik
+komb		prazno
+komb_su		prazno
+komb_sd		prazno
 
 SIF_SOLSKO_LETO	šifrant šolskih let
 solsko_leto_sif	id šolskega leta
