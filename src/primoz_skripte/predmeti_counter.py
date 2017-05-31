@@ -2,6 +2,7 @@ from collections import defaultdict
 from openpyxl import load_workbook
 predmeti = defaultdict(int)
 from openpyxl import Workbook
+
 wb = load_workbook("../podatki/izbirci_correct.xlsx")
 sr= wb["correcttxt_new"]
 c=2
