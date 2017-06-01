@@ -1,0 +1,33 @@
+import csv
+
+from openpyxl import load_workbook
+
+def load_notebook(file):
+    wb = load_workbook(file)
+    return wb.get_sheet_by_name(wb.get_sheet_names()[0])
+
+nb_st_otrok_po_solah = load_notebook('st_otrok_po_solah.xlsx')
+
+st_otrok_po_solah = dict()
+
+for row in nb_st_otrok_po_solah.iter_rows(row_offset=1):
+    st_otrok_po_solah[row[0].value] = row[1].value
+
+nb_izbirci = load_notebook('izbirci_correct.xlsx')
+
+izbirci = []
+
+for i, row in list(enumerate(nb_izbirci.iter_rows(row_offset=1)))[:-1]:
+    sola = row[0].value
+    if sola not in st_otrok_po_solah:
+        print(i, sola)
+        break
+    izbirci += [
+        [sola, row[1].value.strip("'"), row[2].value[1:-5], str(row[7].value/st_otrok_po_solah[sola]).replace(".",",")]
+    ]
+
+with open('normalizirani_izbirci.csv','w',newline="\n") as out:
+    csv_out = csv.writer(out, delimiter =';')
+    csv_out.writerow(['id šole','šola','izbirni predmet','odstotek učencev iz šole'])
+    for row in izbirci:
+        csv_out.writerow(row)
