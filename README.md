@@ -111,3 +111,89 @@ Iz podatkov je razvidno, da je več otrok v podaljšanem bivanju iz zahodne slov
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regije/avg_st_odlocba.jpg?raw=true "Povprečno število otrok z odločbo o usmerjanju po regijah")
 
 Prišel sem do zanimive ugotovitve, da zasavska regija nenavadno odstopa od ostalih regij. Vse ostanle imajo povprečno manj kot enega učeca na oddelek. Zasavska pa kar 1,6.
+
+### Končne ugotovitve
+
+#### Klasifikacijski in regresijski model za napoved regije iz predmetov
+
+Ker smo že do vmesne predstavitve raziskali veliko osnovnih in smiselnih stvari, je bil sedaj izziv narediti nekaj smiselnega z vsem kar smo se naučili dosedaj in z podatki. Med vmesno predstavitvo smo dobili povrate informacije, da se naj usmerimo v bolj specifične probleme. Tako smo se odločili za analizo predmetov, glede na to iz katere regije izhajajo. Ponovno sem izdelal nekaj skript, ki nam omogočajo, da na preprost način poberemo vse potrebne podatke o predmetih, regijah in o učencih, ki obiskujejo te predmete. Ideja je bila taka, da če imamo šole, ki imajo neke specifične predmete (npr. Kleklanje, Madžarščina, Italianščina), ali lahko napovemo, v kateri regiji so šole, ki vsebujejo te predmete.
+
+```python
+regresija_podatki=defaultdict(lambda : defaultdict(int))
+
+for i in range(2,77478):
+    sola = sr["A" + str(i)].value
+    predmet = sr["B"+str(i)].value
+    vsi_predmeti.add(predmet)
+    if predmet not in katere_predmete_sola[sola]:
+        katere_predmete_sola[sola].append(predmet)
+        temp_dict=defaultdict(int)
+        regresija_podatki[sola][predmet]=sr["F"+str(i)].value
+```
+
+Sledeča zanka iterira čez vse celice (od 2 do 77478), in pobira imena šol in predmetov, predmete dodamo v množico, ker jih bomo rabili kot vrednosti stolpca. Slovar katere_predmete_sola[sola], vsebuje vse predmete, ki jih ima določena šola. Nato si za vsako šolo zapomnimo, koliko udeležencov ima posamezen predmet. Tako lahko sestavimo regresijski model, kjer so stolpci imena predmetov, vrstice šole v določeni regiji, vrednosti v matriki predmetov*šol pa je število otrok, ki obiskuje ta predmet, v šoli, ki spada pod določeno regijo. Načeloma bi lahko poslušal napovedovati šole, vendar je to pretežak problem, s tako množico podatkov. Pri klasifikaciji, pa je bila vrednost 1 če ima šola ta predmet, sicer pa 0.
+
+#### Klasifikacijski model
+
+Model sem testiral z različnimi metodami in dosegel sledeče rezultate.
+
+| Method                    | AUC    | CA     |  F1     | Precision  | Recall |
+| ------------------------- |--------|--------|---------|------------|--------|
+| Naive Bayes               | 0.749  | 0.232  |  0.226  | 0.282      | 0.232  |
+| ------------------------- |--------|--------|---------|------------|--------|
+| kNN                       | 0.745  | 0.328  |  0.267  | 0.372      | 0.328  |
+| ------------------------- |--------|--------|---------|------------|--------|
+| Tree                      | 0.632  | 0.253  |  0.250  | 0.249      | 0.253  |
+| ------------------------- |--------|--------|---------|------------|--------|
+| Random Forest             | 0.719  | 0.345  |  0.246  | 0.261      | 0.345  |
+
+Presenetljivo je model dokaj dober, v primerjavi z prvim, ki sem ga naredil za regresijo in dosegel CA 0.1, imamo tuka z knn in naključnimi gozdovi klasifikacijsko točnost 0.328, 0.348, sicer ni spet nevem kaj osupljivo, vendar tako vidimo, da je neka povezava med regijam in predmeti, kar pa je bil namen modela. Na spodnji sliki pa lahko vidimo kako sta poskušala ugotoviti predmete Bayes in nakčjučni gozd, model je bil testiran z metodo Leave one out, kjer smo imeli razmerje učne/tesne 70/30.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/klas/bayes_predicted.png?raw=true "Napovedi Bayesa")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/klas/forest_predicted.png?raw=true "Napovedi Gozda")
+
+#### Regresijski model
+
+Model sem testiral z različnimi metodami in dosegel sledeče rezultate.
+
+| Method                    | AUC    | CA     |  F1     | Precision  | Recall |
+| ------------------------- |--------|--------|---------|------------|--------|
+| Logistic Regression       | 0.742  | 0.345  |  0.308  | 0.304      | 0.345  |
+| ------------------------- |--------|--------|---------|------------|--------|
+| AdaBoost                  | 0.589  | 0.272  |  0.277  | 0.283      | 0.272  |
+| ------------------------- |--------|--------|---------|------------|--------|
+| Naive Bayes               | 0.716  | 0.121  |  0.125  | 0.429      | 0.121  |
+
+Tukaj sem pa poskušal napovedat regijo, na podlagi tega, koliko otrok obiskuje določen predmet. Tudi tukaj imam boljše rezultate od zadnjič, z logično regresijo dosežem klasifikacijsko točnost 0.345, čisto iz fore sem poskusil še Bayesa, ki brez presenečenj, ni imel preveč dobre točnosti. Spodnja slika prikazuje kako je logična regresija napovedovala predmete. Tukaj se mi je zdelo zanimivo, da čisto ignorira zasavsko regijo, tako sem pogledal ROC krivuljo, ki je dokaj slaba, nasproti s savinjsko, ki ima bolj smiselno obliko
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/regr_log_reg.png?raw=true "Napovedi Logične regresije")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/zasavska_roc.png?raw=true "Zasavsa ROC krivulja")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/zasavska_roc.png?raw=true "Savinjska ROC krivulja")
+
+#### Predmeti in šole
+
+Ker sem imel že pripravljene podatke, sem pogledal kako so zastopani določeni predmeti v vseh šolah v Sloveniji. Hipoteza je bila sledeča, nenavadni predmeti kot so kleklanje in Italianščina so specifični za določene regije, predmeti kot Šport za sprostitev pa so prisotni v skoraj vseh šolah. Spodnja slika predstavlja, šole v specifični regiji, in ali ima predmet ali ne. Zastavljena hipoteza je bila potrjena.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/klas/kleklanje_regija.png?raw=true "Zastopanje kleklanja")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/klas/ital_regija.png?raw=true "Zastopanje Italianščine")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/klas/šport_zdravje_pravoslavje.png?raw=true "Zastopanje Športa za sprostitev")
+
+#### Predmeti in šole glede na udeležbo
+
+Iz regresije sem še izdelal scatterplot-e, ki predstavljajo število otrok, za določen predmet. Enako kot zgoraj sem gledal za kleklanje, Italianščino in šport za zdravje. Scatter plotti predstavljajo št. otrok, ki obiskuje določen predmet, glede na regijo.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/kleklanje.png?raw=true "Št. otrok kleklanje")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/ital_udelezba.png?raw=true "Št. otrok Italianščina")
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/šport_zdravje_udelezba.png?raw=true "Št. otrok šport")
+
+Na koncu pa me je še zanimalo, kako je pri udeležbi pri dveh zelo znanih/popularnih predmetih, ali je stvar približno enaka, ali je kakšen favorit. Tako sem pogledal, udeležbo med športom za zdravje in športom za sprostitev.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/zdravje_vs_sprostitev.png?raw=true "Št. otrok Zdravje vs Sprostitev")
+

@@ -1,0 +1,68 @@
+IZBIRCI		izbirni predmeti
+zavsif		id zavoda
+zavnaz		naziv zavoda
+prtnaz		naziv predmeta
+predmet_id	id predmeta
+program_id	id programa
+st_dur		število ur??
+delitev		število delitev??
+st_uc		število učencev
+st_odd		število oddelkov
+st_pu		število??
+
+IZOBE_NA_DOMU	izobraževanje na domu
+zavsif		id zavoda
+sl_id		id oddelka??
+obr_id		id
+st_uc		število učencev
+naziv		naziv razreda??
+naziv povezave	??
+
+POD_ODD_1	podatki o oddelku
+sl_id		id??
+zavsif		id zavoda
+oezrrs		id občine??
+komentar	komentar
+zavkategnac	kategorija zavoda?? [OŠ, OŠPP]??
+predmetnik	predmetnik [A-??] ??
+zavsifmat	id matičnega zavoda??
+sist_spec_kod	??
+sist_spec_rom	romi??
+id		id oddelka??
+mat id		id matičnega oddelka??
+program_id	id programa??
+razred		razred??
+razred_oznaka	oznaka razreda [A-]
+tip		tip??
+delež		delež??
+st_uc		število učencev
+st_dek		število deklet
+st_rom		število romov
+st_odl_usm	število učencev z odločbo o usmerjanju??
+niz_nor		??
+st_opb		število učencev v podaljšanem bivanju [#, null??]
+jezik_1		1. tuji?? jezik
+jezik_2		2. tuji?? jezik
+komb		kombiniran oddelek??
+komb_su		število učencev v kombiniranem oddelku??
+komb_sd		število deklic v kombiniranem oddelku??
+
+SIF_SOLSKO_LETO	šifrant šolskih let
+solsko_leto_sif	id šolskega leta
+solsko leto	šolsko leto
+aktivno		aktivno šolsko leto [0,1]
+
+SIFRANT	šifrant
+id		id šifre
+razred		razred šifre šifra
+nadrejen	nadrejena šifra
+d_od		??
+d_do		??
+sifra		šifra
+naziv		naziv
+izb		??
+apl_id		??
+vr_red		??
+int1		??
+ob_id		??
+reg_ref		??
