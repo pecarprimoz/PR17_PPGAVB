@@ -140,11 +140,8 @@ Model sem testiral z različnimi metodami in dosegel sledeče rezultate.
 | Method                    | AUC    | CA     |  F1     | Precision  | Recall |
 | ------------------------- |--------|--------|---------|------------|--------|
 | Naive Bayes               | 0.749  | 0.232  |  0.226  | 0.282      | 0.232  |
-| ------------------------- |--------|--------|---------|------------|--------|
 | kNN                       | 0.745  | 0.328  |  0.267  | 0.372      | 0.328  |
-| ------------------------- |--------|--------|---------|------------|--------|
 | Tree                      | 0.632  | 0.253  |  0.250  | 0.249      | 0.253  |
-| ------------------------- |--------|--------|---------|------------|--------|
 | Random Forest             | 0.719  | 0.345  |  0.246  | 0.261      | 0.345  |
 
 Presenetljivo je model dokaj dober, v primerjavi z prvim, ki sem ga naredil za regresijo in dosegel CA 0.1, imamo tuka z knn in naključnimi gozdovi klasifikacijsko točnost 0.328, 0.348, sicer ni spet nevem kaj osupljivo, vendar tako vidimo, da je neka povezava med regijam in predmeti, kar pa je bil namen modela. Na spodnji sliki pa lahko vidimo kako sta poskušala ugotoviti predmete Bayes in nakčjučni gozd, model je bil testiran z metodo Leave one out, kjer smo imeli razmerje učne/tesne 70/30.
@@ -160,9 +157,7 @@ Model sem testiral z različnimi metodami in dosegel sledeče rezultate.
 | Method                    | AUC    | CA     |  F1     | Precision  | Recall |
 | ------------------------- |--------|--------|---------|------------|--------|
 | Logistic Regression       | 0.742  | 0.345  |  0.308  | 0.304      | 0.345  |
-| ------------------------- |--------|--------|---------|------------|--------|
 | AdaBoost                  | 0.589  | 0.272  |  0.277  | 0.283      | 0.272  |
-| ------------------------- |--------|--------|---------|------------|--------|
 | Naive Bayes               | 0.716  | 0.121  |  0.125  | 0.429      | 0.121  |
 
 Tukaj sem pa poskušal napovedat regijo, na podlagi tega, koliko otrok obiskuje določen predmet. Tudi tukaj imam boljše rezultate od zadnjič, z logično regresijo dosežem klasifikacijsko točnost 0.345, čisto iz fore sem poskusil še Bayesa, ki brez presenečenj, ni imel preveč dobre točnosti. Spodnja slika prikazuje kako je logična regresija napovedovala predmete. Tukaj se mi je zdelo zanimivo, da čisto ignorira zasavsko regijo, tako sem pogledal ROC krivuljo, ki je dokaj slaba, nasproti s savinjsko, ki ima bolj smiselno obliko
@@ -171,7 +166,7 @@ Tukaj sem pa poskušal napovedat regijo, na podlagi tega, koliko otrok obiskuje 
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/zasavska_roc.png?raw=true "Zasavsa ROC krivulja")
 
-![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/zasavska_roc.png?raw=true "Savinjska ROC krivulja")
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/savinjsa_roc.png?raw=true "Savinjska ROC krivulja")
 
 #### Predmeti in šole
 
@@ -187,7 +182,7 @@ Ker sem imel že pripravljene podatke, sem pogledal kako so zastopani določeni 
 
 Iz regresije sem še izdelal scatterplot-e, ki predstavljajo število otrok, za določen predmet. Enako kot zgoraj sem gledal za kleklanje, Italianščino in šport za zdravje. Scatter plotti predstavljajo št. otrok, ki obiskuje določen predmet, glede na regijo.
 
-![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/kleklanje.png?raw=true "Št. otrok kleklanje")
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/kleklanje_udelezba.png?raw=true "Št. otrok kleklanje")
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/ital_udelezba.png?raw=true "Št. otrok Italianščina")
 
