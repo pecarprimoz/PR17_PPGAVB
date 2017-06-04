@@ -201,3 +201,25 @@ Najprej sem podatke o izbirnih predmetov normaliziral. To sem naredil tako, da s
 Za gručenje sem uporabil k-means algoritem. Šole se niso dobro rasporedile po gručah, saj so bile večinoma gruče z po eno ali dve šoli. Prišel sem do ugotovitve, da so to večinoma šole, ki imajo poseben program, se pravi šole s prilagojenim programom, Montessori in Waldorfske šole. Večinoma vse ostale šole pa so bile uvrščene v isto gručo. 
 
 Ker sem sklepal, da se šole razlikujejo še posebaj po izbirnih predmetih, ki jih izvajajo na manj šolah sem izbral polovico takih predmetov in še na njih naredil gručenje. Tako se dobil nekoliko boljše rezultate.
+
+#### Jezik kot izbirni predmet
+
+Ob končni analizi sem lahko iz galvne zbirke podatkov dobil tudi nekaj informacij o jezikih, ki jih šole ponujajo med dodatnimi predmeti.
+
+Naredil sem analizo zastopanosti jezikovnih predmetov in dobil sledeče rezultate:
+(graf prikazuje štiri najbolj zastopane jezike)
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/zastopanost_jezikov.png?raw=true "Zastopanost jezikovnih predmetov")
+
+Rezultat se mi zdi zanimiv. Nisem pričakoval, da bo imela nemščina tako veliko prednost pred drugimi jeziki. Zanimivo se mi zdi tudi to, da je španščina manj zastopana kot francoščina glede na to, da je španščina drugi najbolj razširjen jezik na svetu (angleščina in nemščina tu igrata drugačno vlogo).
+Opazil sem tudi, da italjanščino ponujajo le v Goriški in Osrednjeslovenjski regiji.
+Madžarščino pa kot dodaten predmet ponuja le ena osnovna šola.
+
+Sa sledečem histogramu se še bolj vidi ogromna prednost nemščine pred drugimi jeziki.
+
+![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/st_otrok_po_jezikih.png?raw=true "Število otrok med leti 2006 in 2017")
+
+Na tako število trok, ki obiskujejo nemščino zelo vpliva tudi procent zastopanosti po šolah. 
+Na histogramu lahko opazimo zanimivost, in sicer, da ima francoščina veliko več učencev kot španščina kljub temu da ima le dobrih 5% boljšo zastopanost. Opazimo tudi da ima italjanščina kljub skoraj 10% manjši zastopanosti zelo podobno število obiskujočih učencev.
+Število otrok po ostalih jezikih, razen hrvaščine, latinščine in ruščine, je praktično zanemarljivo. Angleščino kot dodaten predmet ponujano večinoma samo šole v Pomurski in Podravski regiji zato tudi temu premerni rezultati. Predvidevam da ima večina šol angleščino kot obvezen predmet in zato ni potrebe po dodatnih predmetih.
+
