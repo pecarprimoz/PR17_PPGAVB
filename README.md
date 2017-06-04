@@ -192,3 +192,12 @@ Na koncu pa me je še zanimalo, kako je pri udeležbi pri dveh zelo znanih/popul
 
 ![alt text](https://github.com/pecarprimoz/PR17_PPGAVB/blob/master/slikice/regresija/zdravje_vs_sprostitev.png?raw=true "Št. otrok Zdravje vs Sprostitev")
 
+#### Gručenje po šolah
+
+Naredil sem gručenje po šolah, tako da sem uporabil podatke o izbirnih predmetih.
+
+Najprej sem podatke o izbirnih predmetov normaliziral. To sem naredil tako, da sem podatke o učencih za določen izbirni predmet zamenjal z odstotkom učencev, ki na tej šoli obiskuje ta predmet. Nato pa sem izdelal matriko, ki ima v vrsticah šole in v stolpcih izbirne predmete. Kjer je vrednost manjkala sem zapisal 0. 
+
+Za gručenje sem uporabil k-means algoritem. Šole se niso dobro rasporedile po gručah, saj so bile večinoma gruče z po eno ali dve šoli. Prišel sem do ugotovitve, da so to večinoma šole, ki imajo poseben program, se pravi šole s prilagojenim programom, Montessori in Waldorfske šole. Večinoma vse ostale šole pa so bile uvrščene v isto gručo. 
+
+Ker sem sklepal, da se šole razlikujejo še posebaj po izbirnih predmetih, ki jih izvajajo na manj šolah sem izbral polovico takih predmetov in še na njih naredil gručenje. Tako se dobil nekoliko boljše rezultate.
