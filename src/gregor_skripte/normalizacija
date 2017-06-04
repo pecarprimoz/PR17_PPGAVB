@@ -23,11 +23,12 @@ for i, row in list(enumerate(nb_izbirci.iter_rows(row_offset=1)))[:-1]:
         print(i, sola)
         break
     izbirci += [
-        [sola, row[1].value.strip("'"), row[2].value[1:-5], str(row[7].value/st_otrok_po_solah[sola]).replace(".",",")]
+        [sola, row[1].value.strip("'"), row[2].value[1:-5], str(row[7].value/st_otrok_po_solah[sola])]#.replace(".",",")]
     ]
+# print(izbirci)
 
-with open('normalizirani_izbirci.csv','w',newline="\n") as out:
+with open('normalizirani_izbirci.csv','w',newline="\n", encoding="windows-1250") as out:
     csv_out = csv.writer(out, delimiter =';')
-    csv_out.writerow(['id šole','šola','izbirni predmet','odstotek učencev iz šole'])
+    csv_out.writerow(['id_sole','sola','izbirni_predmet','odstotek_ucencev_iz_sole'])
     for row in izbirci:
         csv_out.writerow(row)
